@@ -1,0 +1,1 @@
+This dir represents a mock server-side service to deliver data

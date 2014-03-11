@@ -1,0 +1,76 @@
+{
+	"response": {
+	    "id": "chart2",
+	  	"serverTime": 1394459677459000,
+	    "data": [{
+			      "key": "Childrens Toys",
+			      "subData": [
+			        {
+			          "date": 1394459677457000,
+			          "imps": 143,
+			          "clicks": 28,
+			          "sales": 3
+			        },
+			        {
+			          "date": 1394459677458000,
+			          "imps": 124,
+			          "clicks": 38,
+			          "sales": 2
+			        },
+			        {
+			          "date": 1394459677459000,
+			          "imps": 186,
+			          "clicks": 43,
+			          "sales": 6
+			        }
+			      ]
+			    },
+			    {
+			      "key": "Video Games",
+			      "subData": [
+			        {
+			          "date": 1394459677457000,
+			          "imps": 63,
+			          "clicks": 21,
+			          "sales": 5
+			        },
+			        {
+			          "date": 1394459677458000,
+			          "imps": 53,
+			          "clicks": 17,
+			          "sales": 3
+			        },
+			        {
+			          "date": 1394459677459000,
+			          "imps": 67,
+			          "clicks": 15,
+			          "sales": 4
+			        }
+			      ]
+			    },
+			    {
+			      "key": "Furniture",
+			      "subData": [
+			        {
+			          "date": 1394459677457000,
+			          "imps": 432,
+			          "clicks": 32,
+			          "sales": 2
+			        },
+			        {
+			          "date": 1394459677458000,
+			          "imps": 326,
+			          "clicks": 25,
+			          "sales": 3
+			        },
+			        {
+			          "date": 1394459677459000,
+			          "imps": 342,
+			          "clicks": 42,
+			          "sales": 4
+			        }
+			      ]
+			    }
+			  ]
+	}
+}

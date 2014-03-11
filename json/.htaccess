@@ -1,0 +1,5 @@
+# Rewrite .json files without extension to fake API service
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.json -f
+RewriteRule ^(.*)$ $1.json

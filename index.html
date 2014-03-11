@@ -1,0 +1,122 @@
+<!doctype html>
+<!-- The above HTML5 Doctype prevents old ie versions from going into quirksmode -->
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<!-- The above conditionals leave us html classes hinting at browser info -->
+
+<head>
+    <meta charset="utf-8"><!-- Prevents unusual character problems -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Tell browsers to use the best possible rendering engine they can -->
+    <title>Webaction Chart Challenge</title>
+    <meta name="description" content=""><!-- Relevant for SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tell handhelds to use sensible scaling / width defaults -->
+
+    <!-- Always load stylesheets first to avoid browser reflow...
+    	 The below stylesheets use html5bp as a baseline. -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body class="allowResize">
+		<!-- Give IE6 and under a msg to update -->
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Include a persistant nav across all pages -->
+	<div class="container" id="navContainer">
+		<a href="#/charts/chart1">Bar Chart</a>
+		<a href="#/charts/chart2">Scatter Plot</a>
+		<a href="#/charts/chart3">Stacked Area</a>
+		--
+		<a href="#" id="toggleDrag">Toggle Fullscreen</a>
+	</div>
+
+	<!-- Our backbone content will all load inside #app -->
+	<div id="appHolder"><div class="rel full"><div id="appDragger">
+		<div class="container" id="app"></div>
+	</div></div></div>
+
+	<!-- Load jQuery from googleapis if possible, because another site may have already used this CDN and cached the results.  Fallback to local. -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/lib/jquery-1.10.2.min.js"><\/script>')</script>
+
+	<!-- Plugins at bottom, minified, and concatenated for speed
+	<script type="text/javascript" src="js/lib/modernizr-2.6.2.min.js"></script>
+	<script type="text/javascript" src="js/lib/underscore-min.js"></script>
+	<script type="text/javascript" src="js/lib/backbone-min.js"></script>
+	<script type="text/javascript" src="js/lib/handlebars.js"></script>
+	-->
+	<!-- Note: handlebars is probably overkill for now, but may be desired later so I've included it. -->
+	<script type="text/javascript" src="js/lib/all.js"></script>
+
+	<!-- For cleanliness, all the nvd3 js files separate here: -->
+	<link rel="stylesheet" type="text/css" href="nvd3/src/nv.d3.css">
+	<script src="nvd3/lib/d3.v3.js"></script>
+	<script src="nvd3/nv.d3.js"></script>
+	<script src="nvd3/src/tooltip.js"></script>
+	<script src="nvd3/src/utils.js"></script>
+	<script src="nvd3/src/models/legend.js"></script>
+	<script src="nvd3/src/models/axis.js"></script>
+
+	<!-- For bar chart -->
+	<script src="nvd3/src/models/multiBar.js"></script>
+	<script src="nvd3/src/models/multiBarChart.js"></script>
+
+	<!-- For scatter graph, include these models -->
+	<script src="nvd3/src/models/distribution.js"></script>
+	<script src="nvd3/src/models/scatter.js"></script>
+	<script src="nvd3/src/models/scatterChart.js"></script>
+
+	<!-- For stacked area chart, include these models -->
+	<script src="nvd3/src/interactiveLayer.js"></script>
+	<script src="nvd3/src/models/scatter.js"></script>
+	<script src="nvd3/src/models/stackedArea.js"></script>
+	<script src="nvd3/src/models/stackedAreaChart.js"></script>
+
+	<!-- Models point to data and contain defaults -->
+	<script type="text/javascript" src="js/models/chartData.js"></script>
+
+	<!-- Views act as templates with model data injection -->
+	<script type="text/javascript" src="js/views/chartDetails.js"></script>
+	<script type="text/javascript" src="js/views/chart1.js"></script>
+	<script type="text/javascript" src="js/views/chart2.js"></script>
+	<script type="text/javascript" src="js/views/chart3.js"></script>
+
+	<!-- App executes backbone code -->
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<!-- jQuery ui for draggable and resizable -->
+	<link href="jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+	<script src="jquery-ui/js/jquery-1.10.2.js"></script>
+	<script src="jquery-ui/js/jquery-ui-1.10.4.custom.js"></script>	
+	<script>
+	$(document).ready(function(){
+		$("#appDragger").resizable();
+		$("#appDragger").draggable();
+		$("#toggleDrag").click(function(e){
+			e.preventDefault();
+			$("body").toggleClass("allowResize");
+			$("body").toggleClass("forceFull");
+		});
+	});
+	</script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    /*
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    */
+    </script>
+</body>
+</html>
