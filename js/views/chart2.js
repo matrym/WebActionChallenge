@@ -100,9 +100,6 @@ var Chart2 = ChartDetails.extend({
 		  return dataForChart;
 		}
 
-		console.log('dataForChart');
-		console.log(dataForChart);
-
 
 
 
@@ -142,12 +139,8 @@ var Chart2 = ChartDetails.extend({
 
 		// Add data to the chart on an interval
 		window.chartUpdateInt = setInterval(function(){
-			console.log('interval hits');
-			console.log('x');
 
 			var dataRemap = remapDataForChart(curData, true, false);
-			console.log(dataRemap);
-			console.log('y');
 
 			d3.select('#chart svg')
 			  	  .datum(remapDataForChart(curData, true, false))

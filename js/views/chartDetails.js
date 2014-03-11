@@ -24,11 +24,6 @@ var ChartDetails = Backbone.View.extend({
 
 		console.log('render console log');
 		// Generate nvd3 charts within the painted svg etc.
-		/*
-		console.log('test');
-		console.log(this);
-		console.log(this.$el.html());
-		*/
 
 		// Conditionally run JS per chart
 		var data = this.model.attributes;

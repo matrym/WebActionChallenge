@@ -15,15 +15,9 @@ var AppRouter = Backbone.Router.extend({
 
     chartView: function(item) {
 
-        console.log('test why set');
-        console.log(this);
-
 
         // Destroy previous chartViews
         if (this.chartView !== null){
-
-        console.log('chartView');
-        console.log(this.chartView);
             this.chartView.remove();
         }
 

@@ -21,8 +21,6 @@ var Chart1 = ChartDetails.extend({
 		  };
 		});
 
-		console.log('td',test_data);
-
 		var negative_test_data = new d3.range(0,3).map(function(d,i) { return {
 		  key: 'Stream' + i,
 		  values: new d3.range(0,11).map( function(f,j) {
@@ -33,8 +31,6 @@ var Chart1 = ChartDetails.extend({
 		  })
 		  };  
 		});
-		console.log('neg data');
-		console.log(negative_test_data);
 
 		var negative_test_data2 = function(){
 			return new d3.range(0,3).map(function(d,i) { return {

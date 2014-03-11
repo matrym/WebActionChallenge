@@ -95,9 +95,6 @@ var Chart3 = ChartDetails.extend({
 		  return dataForChart;
 		}
 
-		console.log('dataForChart');
-		console.log(dataForChart);
-
 
 		/*
 		.map(function(series) {
@@ -169,9 +166,6 @@ var Chart3 = ChartDetails.extend({
 
 		  return chart;
 		});
-
-		console.log('curGraph');
-		console.log(curGraph);
 
 		// Clear out intervals from other charts
 		if (typeof chartUpdateInt !== "undefined"){
